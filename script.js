@@ -2,7 +2,7 @@ const gotCitiesCSV = "King's Landing,Braavos,Volantis,Old Valyria,Free Cities,Qa
 
 const lotrCitiesArray = ["Mordor", "Gondor", "Rohan", "Beleriand", "Mirkwood", "Dead Marshes", "Rhun", "Harad"];
 
-const bestThing = "The best thing about a boolean is even if you are wrong you are only off by a bit";
+const bestThing = "The Best thing about a Boolean is even if you are wrong you are only off By a Bit";  //81//
 
 //  var newElement = document.createElement("div");
 // newElement.className = "bar";
@@ -102,8 +102,8 @@ for (i = 2; i <= 4; i++) {
 }
 // Step 8 Using splice, remove "Rohan" from lotrCitiesArray //
 {
-    lotrCitiesArray.splice(2, 1, "");
-
+    var spliced = lotrCitiesArray.splice(2, 1);
+    
 
     var newElement = document.createElement("div");
 
@@ -117,7 +117,7 @@ for (i = 2; i <= 4; i++) {
 // Step 9 Using splice, remove all cities after "Dead Marshes" in lotrCitiesArray //
 {
 
-    lotrCitiesArray.splice(5, 3, "");
+    var spliceandDice = lotrCitiesArray.splice(5, 3);
 
 
     var newElement = document.createElement("div");
@@ -131,7 +131,7 @@ for (i = 2; i <= 4; i++) {
 }
 // Step 10 Using splice, add "Rohan" back to lotrCitiesArray right after "Gondor" //
 {
-    lotrCitiesArray.splice(3, 0, "Rohan");
+    var nope = lotrCitiesArray.splice(2, 1, "Rohan");
 
 
     var newElement = document.createElement("div");
@@ -146,7 +146,7 @@ for (i = 2; i <= 4; i++) {
 //Step 11 Using splice, rename "Dead Marshes" to "Deadest Marshes" in lotrCitiesArray //
 {
 
-    lotrCitiesArray.splice(-1, 3, "Deadest Marshes", "Rhun", "Harad");
+    var changed = lotrCitiesArray.splice(4, 1, "Deadest Marshes");
 
 
     var newElement = document.createElement("div");
@@ -175,7 +175,7 @@ for (i = 2; i <= 4; i++) {
     var newElement = document.createElement("div");
 
 
-    newElement.textContent = bestThing.slice(0, 12);
+    newElement.textContent = bestThing.slice(69, 81);
 
 
     var destination = document.getElementById("d13");
@@ -198,7 +198,7 @@ for (i = 2; i <= 4; i++) {
     var newElement = document.createElement("div");
 
 
-    newElement.textContent = bestThing.substring(0, 12);
+    newElement.textContent = bestThing.substring(69, 81);
 
 
     var destination = document.getElementById("d15");
@@ -271,18 +271,19 @@ newElement.textContent = orCity;
 var destination = document.getElementById("d20");
 destination.appendChild(newElement);
 // Step 21 Find and display all the words in bestThing that start with a "b" //
-var orCity = "";
-for (var i = 0; i < lotrCitiesArray.length; i++) {
-    city = lotrCitiesArray[i];
+var orCity = " ";
+var arrayChange = bestThing.split(" ")
+for (var i = 0; i < arrayChange.length; i++) {
+    city = arrayChange[i];
     if (city.includes("B")) {
-        orCity += city ;
+        orCity += city + " " ;
 
     }
 
 }
 var newElement = document.createElement("div");
 
-newElement.textContent = orCity;
+newElement.textContent = orCity ;
 
 var destination = document.getElementById("d21");
 destination.appendChild(newElement);
@@ -390,7 +391,7 @@ function shortestCities(a, b) {
 }
 // Step 30 Using push, add back the city from lotrCitiesArray that was removed in #29 to the back of the array //
 {
-    var lastAdd = lotrCitiesArray.push("Deadest Marshes");
+    var lastAdd = lotrCitiesArray.push("Deadest Marshes", "Beleriand","Harad", "Rhun");
 
     var newElement = document.createElement("div");
 
@@ -401,7 +402,7 @@ function shortestCities(a, b) {
 }
 // Step 31 Using shift, remove the first city from lotrCitiesArray //
 {   
-    var reorder = lotrCitiesArray.splice(0,1)
+    
     var shift = lotrCitiesArray.shift();
 
     var newElement = document.createElement("div");
@@ -413,7 +414,7 @@ function shortestCities(a, b) {
 }
 // Using unshift, add back the city from lotrCitiesArray that was removed in #31 to the front of the array //
 {   
-    var unshifted = lotrCitiesArray.unshift("Rhun");
+    var unshifted = lotrCitiesArray.unshift("Rohan");
     
 
     var newElement = document.createElement("div");
